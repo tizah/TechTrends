@@ -1,0 +1,34 @@
+## Docker commands used to build the application 
+docker build -t davidzagi/techtrends .
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 davidzagi/techtrends
+
+## Docker commands used to get the application logs
+docker logs <container_id>
+docker logs 3bbe794611c1
+
+## Logs from the container running the TechTrends application 
+INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)        
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:21:02] "GET / HTTP/1.1" 200 -     
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:21:02] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:21:03] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:root:"About Us" page was retrieved
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:21:09] "GET /about HTTP/1.1" 200 -INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:21:10] "GET /create HTTP/1.1" 200 
+-
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:21:13] "GET / HTTP/1.1" 200 -     
+INFO:root:/metrics url accessed
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:22:08] "GET /metrics HTTP/1.1" 200 -
+INFO:root:/heathz url accessed
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:22:15] "GET /healthz HTTP/1.1" 200 -
+INFO:root:Article "2020 CNCF Annual Report" retrieved.
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:30:05] "GET /1 HTTP/1.1" 200 -    
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:30:09] "GET / HTTP/1.1" 200 -     
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:30:11] "GET /create HTTP/1.1" 200 
+-
+INFO:root:Article "Learning Cloud Native" created
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:30:35] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:30:35] "GET / HTTP/1.1" 200 -     
+INFO:root:Article "Learning Cloud Native" retrieved.
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:30:38] "GET /7 HTTP/1.1" 200 -    
+INFO:werkzeug:172.17.0.1 - - [17/Aug/2021 22:30:41] "GET / HTTP/1.1" 200 -  
